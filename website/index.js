@@ -20,4 +20,5 @@ app.get("/thank-you", (req, res) => {
     res.sendFile(path.join(__dirname, "public", "thankyou.html"));
 });
 
-app.listen(3000);
+
+app.listen(process.env.PORT || 3000, "0.0.0.0");
