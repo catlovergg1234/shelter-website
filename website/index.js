@@ -24,6 +24,11 @@ app.get("/images/robot.jpg", (req, res) => {
     res.sendFile(path.join(__dirname, "public", "robot.jpg"))
 });
 
+app.use((req, res, next) => {
+    res.status(404).sendFile(path.join(__dirname, "public", "404.html"));
+    next();
+});
 
 app.listen(process.env.PORT || 3000, "0.0.0.0");
+
 
