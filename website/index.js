@@ -25,7 +25,7 @@ app.get("/images/robot.jpg", (req, res) => {
 });
 
 app.get("/images/cat.png", (req, res) => {
-    res.sendFile(path.join(__dirname, "public", "cat.png"))
+    res.sendFile(path.join(__dirname, "public", "4d4fd95b-9742-4d6b-bb83-0c81ac987642.png"))
 });
 
 app.use((req, res, next) => {
@@ -33,6 +33,7 @@ app.use((req, res, next) => {
 });
 
 app.listen(process.env.PORT || 3000, "0.0.0.0");
+
 
 
 
