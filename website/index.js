@@ -28,11 +28,16 @@ app.get("/images/cat.png", (req, res) => {
     res.sendFile(path.join(__dirname, "public", "4d4fd95b-9742-4d6b-bb83-0c81ac987642.png"))
 });
 
+app.get("/the-animal-protection-law"), (req, res) => {
+    res.sendFile(path.join(__dirname, "public", "the_animal_protection_law.html"))
+});
+
 app.use((req, res, next) => {
     res.status(404).sendFile(path.join(__dirname, "public", "404.html"));
 });
 
 app.listen(process.env.PORT || 3000, "0.0.0.0");
+
 
 
 
